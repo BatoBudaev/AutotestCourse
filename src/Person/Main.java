@@ -9,7 +9,7 @@ public class Main {
         person2.setName("Jack");
         person2.setMiddleName("Thomas");
         person2.setFamilyName("Evans");
-        person2.setAge(15);
+        person2.setAge(31);
 
         System.out.printf("%s %s %s\n", person1.getName(), person1.getMiddleName(), person1.getFamilyName());
         System.out.printf("Age - %s\n", person1.getAge());

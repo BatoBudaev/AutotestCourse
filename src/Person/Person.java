@@ -1,6 +1,7 @@
 package Person;
 
 import java.time.Year;
+import java.util.Objects;
 
 class Person {
     private String name;
@@ -22,6 +23,7 @@ class Person {
     }
 
     public void setName(String name) {
+        checkStringValue(name);
         this.name = name;
     }
 
@@ -30,6 +32,7 @@ class Person {
     }
 
     public void setMiddleName(String middleName) {
+        checkStringValue(name);
         this.middleName = middleName;
     }
 
@@ -38,6 +41,7 @@ class Person {
     }
 
     public void setFamilyName(String familyName) {
+        checkStringValue(name);
         this.familyName = familyName;
     }
 
@@ -46,6 +50,7 @@ class Person {
     }
 
     public void setAge(int age) {
+        checkIntValue(age);
         this.age = age;
     }
 
@@ -60,4 +65,17 @@ class Person {
     public int getYearOfBirth() {
         return Year.now().getValue() - age;
     }
+
+    private void checkStringValue(String value) {
+        if (Objects.isNull(value) || value.length() == 0) {
+            throw new IllegalArgumentException("Please enter a valid value");
+        }
+    }
+
+    private void checkIntValue(int value) {
+        if (value < 0 || value > 120) {
+            throw new IllegalArgumentException("Please enter a valid value");
+        }
+    }
+
 }

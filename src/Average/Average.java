@@ -1,9 +1,14 @@
 package Average;
 
+import java.util.Scanner;
+
 public class Average {
     public static void main(String[] args) {
-        int startNumber = 3;
-        int endNumber = 18;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите начало и конец диапазона:");
+
+        int startNumber = scanner.nextInt();
+        int endNumber = scanner.nextInt();
         int i = startNumber;
         int sum = 0;
         int count = 0;
