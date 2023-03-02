@@ -5,26 +5,26 @@ import java.util.Scanner;
 public class Average {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите начало и конец диапазона:");
-
+        System.out.println("Введите начало диапазона:");
         int startNumber = scanner.nextInt();
+        System.out.println("Введите конец диапазона:");
         int endNumber = scanner.nextInt();
-        int i = startNumber;
+
         int sum = 0;
         int count = 0;
         int evenNumbersCount = 0;
         int evenNumbersSum = 0;
 
-        while (i <= endNumber) {
-            sum += i;
+        while (startNumber <= endNumber) {
+            sum += startNumber;
             count++;
 
-            if (i % 2 == 0) {
-                evenNumbersSum += i;
+            if (startNumber % 2 == 0) {
+                evenNumbersSum += startNumber;
                 evenNumbersCount++;
             }
 
-            i++;
+            startNumber++;
         }
 
         double average = (double) sum / count;
